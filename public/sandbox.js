@@ -1,17 +1,13 @@
-"use strict";
-class Invoice {
-    // readonly client: string;
-    // private details: string;
-    // amount: number;
-    constructor(client, details, amount) {
-        this.client = client;
-        this.details = details;
-        this.amount = amount;
-    }
-    format() {
-        return `${this.client} owes $${this.amount} for ${this.details}`;
-    }
-}
+import { Invoice } from './classes/index';
+import { Payment } from './classes/Payment';
+let docOne;
+let docTwo;
+docOne = new Invoice('yoshi', 'web work', 250);
+docTwo = new Payment('mario', 'plumbing work', 250);
+let docs = [];
+docs.push(docOne);
+docs.push(docTwo);
+console.log(docs);
 const invOne = new Invoice('mario', 'work on the mario website', 250);
 const invTwo = new Invoice('luigi', 'work on the mario website', 300);
 let invoices = [];
@@ -19,7 +15,7 @@ invoices.push(invOne);
 invoices.push(invTwo);
 const form = document.querySelector('.nav-item-form');
 //   inputs
-const type = document.querySelector('.#type');
-const toForm = document.querySelector('.#toForm');
-const details = document.querySelector('.#details');
-const amount = document.querySelector('.#amount');
+const type = document.querySelector('#type');
+const toForm = document.querySelector('#toForm');
+const details = document.querySelector('#details');
+const amount = document.querySelector('#amount');
